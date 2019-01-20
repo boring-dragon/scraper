@@ -21,15 +21,17 @@ def scapp():
         # grabbing the header
           title = post.find('h1').get_text().replace('\n', '')
         # grabbing the link
-          link = post.find('a')['href']
+          link = response.url
         # grabbing the date
           date = post.find(class_='ltr text-sm text-grey-dark pl-2').get_text().replace('\n', '')
         # output
           print(title, link, date)
 
-        # Writing to a file
+        # Writing to a fileS
         file = open('testfile.txt', 'a+', encoding="utf-8")
         file.write(title + "\n")
+        file.write("")
+        file.write(link + "\n")
         file.close()
 
 
