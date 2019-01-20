@@ -7,8 +7,9 @@ from csv import writer
 
 # scraping function
 def scapp():
-    # generates random number
-    num = random.randint(50000, 58679)
+    #run the articles in sequence
+    for i in range(50000, 58679):
+        num = i
     # url that its pulling
     response = requests.get('https://avas.mv/' + str(num))
     # parsing the html
